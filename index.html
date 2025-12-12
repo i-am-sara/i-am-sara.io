@@ -1,12 +1,243 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mi Página Personal</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Ingeniería Biomédica</title>
+    <style>
+       
+        :root {
+            --primary-color: #007BFF; /* Azul para énfasis */
+            --secondary-color: #28a745; /* Verde para éxito/logros */
+            --background-color: #f8f9fa; /* Fondo claro */
+            --text-color: #343a40; /* Texto oscuro */
+            --card-background: #ffffff; /* Fondo de tarjetas */
+            --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            font-family: var(--font-family);
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 10px 10px 0 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 1.2em;
+        }
+
+        /* Estilos de Sección */
+        section {
+            background-color: var(--card-background);
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        /* Estilos de Tarjetas de Proyectos */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            border: 1px solid #dee2e6;
+            border-radius: 6px;
+            padding: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-card h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+
+        .project-card a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .project-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilos de Idiomas */
+        .language-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .language-list li {
+            background-color: #e9ecef;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-left: 5px solid var(--secondary-color);
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .language-list li strong {
+            font-size: 1.1em;
+        }
+        
+        /* Estilos para el pie de página */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+            border-top: 1px solid #dee2e6;
+            color: #6c757d;
+        }
+
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Iconos (usando emojis o font awesome si se añade) */
+        .icon {
+            margin-right: 8px;
+        }
+        
+        /* Media Queries para responsividad */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .container {
+                width: 95%;
+                margin: 20px auto;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
 </head>
 <body>
-  <h1>¡Hola! Soy Sara</h1>
-  <p>Bienvenida a mi página personal en GitHub Pages.</p>
+
+    <header>
+        <h1>[Tu Nombre Completo]</h1>
+        <p>🔬 Ingeniero(a) Biomédico(a) | Innovación en Salud y Tecnología</p>
+    </header>
+
+    <div class="container">
+        
+        <section id="biomedica">
+            <h2><span class="icon">💡</span> Ingeniería Biomédica: Mi Enfoque</h2>
+            <p>La Ingeniería Biomédica representa la convergencia entre la ingeniería y la medicina. Mi pasión reside en desarrollar soluciones tecnológicas para mejorar el diagnóstico, tratamiento y rehabilitación de pacientes.</p>
+            <p>Mis áreas de interés clave incluyen:</p>
+            <ul>
+                <li>**Bioinstrumentación y Dispositivos Médicos:** Diseño y optimización de sensores y equipos para monitorización y terapia.</li>
+                <li>**Procesamiento de Señales Biológicas (ECG, EEG, EMG):** Aplicación de algoritmos para extraer información clínica relevante.</li>
+                <li>**Biomecánica y Materiales:** Estudio del movimiento humano y desarrollo de prótesis/órtesis innovadoras.</li>
+                <li>**Informática Médica (eHealth/Telemedicina):** Implementación de sistemas de información para la gestión de datos en salud.</li>
+            </ul>
+             
+        </section>
+
+        <section id="proyectos">
+            <h2><span class="icon">🛠️</span> Proyectos e Intereses</h2>
+            <p>Aquí se listan algunos de los proyectos más relevantes que he desarrollado o en los que he participado:</p>
+
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <h3>Proyecto 1: Sistema de Monitorización Remota de Pacientes</h3>
+                    <p>Desarrollo de un sistema IoT basado en microcontroladores (Arduino/Raspberry Pi) para la captura y transmisión de signos vitales a una plataforma web.</p>
+                    <p><strong>Tecnologías:</strong> Python, MQTT, Bases de Datos SQL, Sensores biomédicos.</p>
+                    <a href="[Link a GitHub o Demo del Proyecto 1]" target="_blank">Ver Proyecto en GitHub</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Proyecto 2: Análisis de Marcha Asistido por Visión Artificial</h3>
+                    <p>Implementación de algoritmos de procesamiento de imágenes (OpenCV) y Machine Learning para el análisis cinemático de la marcha en rehabilitación.</p>
+                    <p><strong>Tecnologías:</strong> MATLAB, Python, Redes Neuronales Convolucionales (CNN).</p>
+                    <a href="[Link a GitHub o Demo del Proyecto 2]" target="_blank">Ver Más</a>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Interés: Aprendizaje Automático en Diagnóstico</h3>
+                    <p>Fuerte interés en la aplicación de modelos de clasificación y regresión para predecir enfermedades a partir de datos clínicos y de imágenes médicas (MRI/CT).</p>
+                    <p><strong>Habilidades:</strong> Scikit-learn, TensorFlow/PyTorch, R.</p>
+                    <a href="[Link a un repositorio de ejemplos de ML]" target="_blank">Ver Ejemplos de ML</a>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="idiomas">
+            <h2><span class="icon">🌐</span> Habilidades Lingüísticas</h2>
+            <p>La comunicación global es clave en el ámbito científico y de la ingeniería:</p>
+            <ul class="language-list">
+                <li>
+                    <strong>Español</strong>
+                    <span>Nativo</span>
+                </li>
+                <li>
+                    <strong>Inglés</strong>
+                    <span>Avanzado (C1) - Certificación [TOEFL/IELTS]</span>
+                </li>
+                <li>
+                    <strong>[Otro Idioma, Ej: Francés]</strong>
+                    <span>Básico/Intermedio (A2/B1)</span>
+                </li>
+            </ul>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>Hecho con ❤️  | Contacto: <a href="saragg.medtech@gmail.com">saragg.medtech@gmail.com</a> | <a href="[Link a tu perfil de LinkedIn]" target="_blank">LinkedIn</a></p>
+    </footer>
+
 </body>
 </html>
