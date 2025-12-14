@@ -177,6 +177,23 @@ a:active {
     color: red; /* Color rojo mientras se está pulsando el enlace */
 }
         }
+      /* Asegura que los enlaces con la clase button se vean como botones */
+.language-button {
+    background-color: #7491D6;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+    
+    /* Propiedades clave para el enlace: */
+    text-decoration: none; /* Quita el subrayado del enlace */
+    display: inline-block; /* Permite que el padding funcione correctamente */
+    text-align: center;
+}
     </style>
 </head>
 <body>
@@ -187,9 +204,16 @@ a:active {
     </header>
 
     <div class="container">
+      <div class="language-container">
+    <h1>Select Language / Selecciona un Idioma</h1>
+    
+    <a href="indexEspañol.html" class="language-button">Español (ES) <span class="icon"></span></a>
+    
+    <button class="language-button" onclick="redirectTo('en')">English (EN)</button>
+</div>
         <div class="navigation-banner">
-    <h3>Do you want to know more about my Work Experience or Studies?</h3>
-    <p>In this link you will find my <strong>LinkedIn</strong></p>
+    <h3>¿Quieres saber más sobre mi Experiencia y Logros Académicos?</h3>
+    <p>En este link encontrarás mi <strong>LinkedIn</strong></p>
     
     <a href="https://www.linkedin.com/in/saragimenezgomez-ingeniera" class="button">Show LinkedIn <span class="icon"></span></a>
 </div>
