@@ -1,0 +1,191 @@
+<style>
+       
+        :root {
+            --primary-color: #07575b; /* Azul electrico para énfasis */
+            --secondary-color: #66a5ad; /* crema para éxito/logros */
+            --background-color: #003b46; /* Fondo azul marino intenso */
+            --text-color: #c4dfe6; /* Texto blanco */
+            --card-background: #66a5ad; /* Fondo de tarjetas */
+            --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            font-family: var(--font-family);
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 10px 10px 0 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 1.2em;
+        }
+
+        /* Estilos de Sección */
+        section {
+            background-color: var(--card-background);
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        /* Estilos de Tarjetas de Proyectos */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            border: 1px solid #dee2e6;
+            border-radius: 6px;
+            padding: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-card h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+
+        .project-card a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .project-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilos de Idiomas */
+        .language-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .language-list li {
+            background-color: #e9ecef;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-left: 5px solid var(--secondary-color);
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .language-list li strong {
+            font-size: 1.1em;
+        }
+        
+        /* Estilos para el pie de página */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+            border-top: 1px solid #dee2e6;
+            color: #6c757d;
+        }
+
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Iconos (usando emojis o font awesome si se añade) */
+        .icon {
+            margin-right: 8px;
+        }
+        
+        /* Media Queries para responsividad */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .container {
+                width: 95%;
+                margin: 20px auto;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
+            a:link {
+    color: var(--secondary-color); /* Color por defecto que quieres */
+    text-decoration: none;
+}
+
+a:visited {
+    color: #888888; /* Un color más sutil para enlaces visitados */
+}
+
+a:hover {
+    color: #000000; /* Color negro al pasar el mouse */
+    text-decoration: underline;
+}
+
+a:active {
+    color: red; /* Color rojo mientras se está pulsando el enlace */
+}
+        }
+      /* Asegura que los enlaces con la clase button se vean como botones */
+.language-button {
+    background-color: #7491D6;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+    
+    /* Propiedades clave para el enlace: */
+    text-decoration: none; /* Quita el subrayado del enlace */
+    display: inline-block; /* Permite que el padding funcione correctamente */
+    text-align: center;
+}
+    </style>
