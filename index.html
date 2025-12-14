@@ -6,20 +6,30 @@
     <title>Biomedical Engineering Profile</title>
    <style>
        
-        :root {
-            --primary-color: #07575b; /* Azul electrico para énfasis */
-            --secondary-color: #66a5ad; /* crema para éxito/logros */
-            --background-color: #003b46; /* Fondo azul marino intenso */
-            --text-color: #c4dfe6; /* Texto blanco */
-            --card-background: #66a5ad; /* Fondo de tarjetas */
-            --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-             background-color: red !important; /* ¡Fondo rojo forzado! */
-    font-family: var(--font-family);
-    margin: 0;
-    padding: 0;
+        :root {
+        /* Variables de Color DESEADAS */
+        --primary-color: #07575b; /* Azul electrico para énfasis */
+        --secondary-color: #66a5ad; /* crema para éxito/logros */
+        --background-color: #003b46; /* Fondo azul marino intenso */ 
+        --text-color: #c4dfe6; /* Texto blanco */
+        --card-background: #66a5ad; /* Fondo de tarjetas */
+        --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            /* ELIMINAR O COMENTAR LA LÍNEA ROJA DE PRUEBA:
+            background-color: red !important;
+            */
+        
+            /* APLICAR EL COLOR DESEADO DEL :root */
+            background-color: var(--background-color); 
+            
+            font-family: var(--font-family);
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
             color: var(--text-color);
             line-height: 1.6;
         }
@@ -176,25 +186,9 @@ a:hover {
 a:active {
     color: red; /* Color rojo mientras se está pulsando el enlace */
 }
-        }
-      /* Asegura que los enlaces con la clase button se vean como botones */
-.language-button {
-    background-color: #7491D6;
-    color: white;
-    padding: 10px 20px;
-    margin: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.1em;
-    transition: background-color 0.3s;
-    
-    /* Propiedades clave para el enlace: */
-    text-decoration: none; /* Quita el subrayado del enlace */
-    display: inline-block; /* Permite que el padding funcione correctamente */
-    text-align: center;
-}
+       
     </style>
+
 </head>
 <body>
 
