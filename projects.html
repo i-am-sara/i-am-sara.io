@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biomedical Engineering Profile</title>
+    <style>
+        
+        :root {
+            /* Variables de Color DESEADAS */
+            --primary-color: #07575b; /* Azul electrico para énfasis */
+            --secondary-color: #c4dfe6; /* crema para éxito/logros */
+            --background-color: #003b46; /* Fondo azul marino intenso */
+            --text-color: #c4dfe6; /* Texto blanco */
+            --card-background: #66a5ad; /* Fondo de tarjetas */
+            --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            /* APLICAR EL COLOR DESEADO DEL :root */
+            background-color: var(--background-color);
+            
+            font-family: var(--font-family);
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .container {
+            /* IMPORTANTE: Reducimos el ancho para dejar espacio al menú lateral */
+            width: 90%;
+            max-width: 930px; /* Reducido de 1200px */
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        /* Estilos del Recuadro Lateral (Fijo) */
+        .recuadro-lateral {
+            position: fixed; 
+            top: 0;          
+            left: 0;         
+            width: 250px; 
+            height: 100%; 
+            background-color: var(--primary-color); /* Fondo del menú */
+            color: white; 
+            padding: 20px;
+            box-sizing: border-box; 
+            z-index: 1000; 
+        }
+
+        .recuadro-lateral ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 10px 10px 0 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header p {
+            margin: 5px 0 0;
+            font-size: 1.2em;
+        }
+
+        /* Estilos de Sección */
+        section {
+            background-color: var(--card-background);
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        /* Estilos de Tarjetas de Proyectos */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            border: 1px solid #dee2e6;
+            border-radius: 6px;
+            padding: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-card h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+
+        .project-card a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .project-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* Language Styles */
+        .language-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .language-list li {
+            background-color: var(--primary-color); /* Usando variable para consistencia */
+            margin-bottom: 10px;
+            padding: 10px;
+            border-left: 5px solid var(--secondary-color);
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .language-list li strong {
+            font-size: 1.1em;
+        }
+        
+        /* Estilos para el pie de página */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+            border-top: 1px solid #dee2e6;
+            color: #6c757d;
+        }
+
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Iconos (usando emojis o font awesome si se añade) */
+        .icon {
+            margin-right: 8px;
+        }
+        
+        /* Estilos del Banner de Navegación/Idioma */
+        .navigation-banner {
+            background-color: var(--primary-color);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        /* Estilos para el botón de enlace principal y idioma */
+        .button, .language-button {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: background-color 0.3s;
+            text-decoration: none; 
+            display: inline-block; 
+            font-weight: bold;
+        }
+        
+        .button:hover, .language-button:hover {
+            background-color: #D6C69F; /* Un tono más claro para el hover */
+        }
+        
+        /* Media Queries para responsividad */
+        @media (max-width: 900px) {
+            .recuadro-lateral {
+                position: static; /* No fijo en móvil */
+                width: 100%;
+                height: auto;
+                padding: 15px;
+                margin-bottom: 20px;
+            }
+            .container {
+                width: 95%;
+                margin: 20px auto;
+                max-width: 100%;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+        
+    </style>
+
+</head>
+<body>
+
+    <header>
+        <h1>Sara Giménez Gómez</h1>
+        <p>Some Projects</p>
+    </header>
+
+       
+
+    <footer>
+       <a href="index.html" target="_blank">Go back</a></p>
+    </footer>
+
+</body>
+</html>
