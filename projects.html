@@ -136,6 +136,64 @@
                 margin-left: auto;
                 width: 95%;
             }
+            /* ESTILOS DEL CARRUSEL */
+.carousel-container {
+    position: relative;
+    max-width: 100%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #002228;
+}
+
+.carousel-slide {
+    display: none; /* Se ocultan por defecto */
+    width: 100%;
+    text-align: center;
+}
+
+.carousel-slide img, .carousel-slide video {
+    width: 100%;
+    max-height: 450px;
+    object-fit: contain; /* Para que no se deformen */
+    vertical-align: middle;
+}
+
+/* Botones de navegación */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0,0,0,0.4);
+    text-decoration: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: var(--primary-color);
+}
+
+/* Texto de numeración */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
         }
     </style>
 </head>
