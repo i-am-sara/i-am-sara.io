@@ -136,65 +136,74 @@
                 margin-left: auto;
                 width: 95%;
             }
-            /* ESTILOS DEL CARRUSEL */
+            /* CONTENEDOR DEL CARRUSEL PROPORCIONADO */
 .carousel-container {
     position: relative;
-    max-width: 100%;
-    margin: 20px auto;
+    max-width: 700px;      /* Ancho máximo para que no sea gigante */
+    width: 90%;            /* En pantallas pequeñas, ocupa el 90% */
+    margin: 30px auto;     /* Centrado con espacio arriba y abajo */
+    aspect-ratio: 16 / 9;  /* Mantiene siempre proporción de video/foto panorámica */
     overflow: hidden;
-    border-radius: 10px;
-    background: #002228;
+    border-radius: 12px;
+    background: #001a20;   /* Fondo muy oscuro para los bordes de la imagen */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    border: 2px solid var(--primary-color); /* Un borde fino para integrarlo */
 }
 
 .carousel-slide {
-    display: none; /* Se ocultan por defecto */
+    display: none;
     width: 100%;
-    text-align: center;
+    height: 100%; /* Ocupa todo el contenedor proporcional */
 }
 
 .carousel-slide img, .carousel-slide video {
     width: 100%;
-    max-height: 450px;
-    object-fit: contain; /* Para que no se deformen */
-    vertical-align: middle;
+    height: 100%;
+    object-fit: contain;  /* IMPORTANTE: Muestra la imagen completa sin recortar ni deformar */
+    display: block;
 }
 
-/* Botones de navegación */
+/* BOTONES ESTILIZADOS */
 .prev, .next {
     cursor: pointer;
     position: absolute;
     top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
+    transform: translateY(-50%); /* Centrado vertical perfecto */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
     font-weight: bold;
     font-size: 20px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    background-color: rgba(0,0,0,0.4);
+    transition: 0.3s;
+    border-radius: 50%; 
+    background-color: rgba(7, 87, 91, 0.7); /* Color primario con transparencia */
     text-decoration: none;
+    user-select: none;
+    z-index: 10;
 }
 
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
+.next { right: 15px; }
+.prev { left: 15px; }
 
 .prev:hover, .next:hover {
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
-/* Texto de numeración */
+/* NUMERACIÓN */
 .numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
+    color: #ffffff;
+    font-size: 13px;
+    padding: 10px 15px;
     position: absolute;
     top: 0;
+    background: rgba(0,0,0,0.3);
+    border-bottom-right-radius: 10px;
+    z-index: 10;
 }
-        }
     </style>
 </head>
 <body>
