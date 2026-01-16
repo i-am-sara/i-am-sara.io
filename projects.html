@@ -71,6 +71,64 @@
             border-bottom: 2px solid var(--primary-color);
             padding-bottom: 5px;
         }
+        /* ESTILOS DE TARJETAS DE PROYECTO */
+.project-card {
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo ligero */
+    border-left: 5px solid var(--primary-color);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    transition: transform 0.2s;
+}
+
+.project-card:hover {
+    transform: translateX(5px);
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.project-header h3 {
+    margin: 0;
+    border: none;
+    color: var(--background-color);
+}
+
+.badge {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.finished { background-color: #28a745; color: white; }
+.in-process { background-color: #ffc107; color: #333; }
+
+.project-description {
+    font-size: 0.95rem;
+    color: #002228;
+    margin-bottom: 15px;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech-stack span {
+    background: var(--primary-color);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+}
 
         /* === ESTILOS DEL CARRUSEL PROPORCIONADO === */
         .carousel-container {
@@ -191,19 +249,50 @@
         </section>
 
         <section id="all">
-            <h2>Current Status</h2>
-            <p>Here you can find some projects that are in process or finished.</p>
-            
-            <div class="project-item">
-                <h3>EMG System and BLE connection</h3>
-                <p><strong>Status:</strong> <span style="color: #004d00;">Finished</span></p>
-            </div>
+    <h2>Engineering Portfolio & Projects</h2>
+    <p>Detailed overview of my work in medical device development and signal processing.</p>
 
-            <div class="project-item">
-                <h3>A myoelectric hand</h3>
-                <p><strong>Status:</strong> <span style="color: #664d00;">In process</span></p>
-            </div>
-        </section>
+    <div class="project-card">
+        <div class="project-header">
+            <h3>EMG System and BLE Connection</h3>
+            <span class="badge finished">Finished</span>
+        </div>
+        <p class="project-description">
+            Design and implementation of a wireless Electromyography (EMG) acquisition system. 
+            Includes analog signal conditioning (filtering and amplification) and real-time data transmission via Bluetooth Low Energy (BLE) to a custom dashboard.
+        </p>
+        <div class="tech-stack">
+            <span>Analog Electronics</span> <span>C++</span> <span>Python</span> <span>Signal Processing</span>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <div class="project-header">
+            <h3>Myoelectric Hand Prosthesis</h3>
+            <span class="badge in-process">In Process</span>
+        </div>
+        <p class="project-description">
+            Development of a 3D-printed prosthetic hand controlled by muscle signals. 
+            Currently working on the integration of Machine Learning algorithms for gesture recognition to improve grip precision.
+        </div>
+        <div class="tech-stack">
+            <span>3D Design (SolidWorks)</span> <span>Embedded Systems</span> <span>Machine Learning</span>
+        </div>
+    </div>
+
+    <div class="project-card">
+        <div class="project-header">
+            <h3>Medical Image Segmentation</h3>
+            <span class="badge finished">Finished</span>
+        </div>
+        <p class="project-description">
+            MATLAB-based tool for automated segmentation of MRI scans to identify specific anatomical structures, reducing manual analysis time by 40%.
+        </p>
+        <div class="tech-stack">
+            <span>MATLAB</span> <span>Computer Vision</span> <span>Medical Imaging</span>
+        </div>
+    </div>
+</section>
 
         <footer>
             <p>&copy; 2025 Sara Giménez Gómez | <a href="index.html">Back to home</a></p>
